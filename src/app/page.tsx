@@ -84,7 +84,7 @@ export default function Home() {
           <StyledMain>
             <Masthead
               homeLink={<Link href="#" />}
-              title="Navy Schedule Service"
+              title="Kitchen Sink"
               user={
                 <MastheadUser initials="RN">
                   <MastheadUserItem
