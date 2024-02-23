@@ -1,95 +1,117 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client'
+
+import '@royalnavy/fonts'
+import {
+  IconChatBubble,
+  IconExitToApp,
+  IconFeedback,
+  IconHome,
+  IconLocalShipping,
+  IconMessage,
+  IconPerson,
+  IconSettings,
+  IconVerifiedUser,
+} from '@royalnavy/icon-library'
+import {
+  Button,
+  GlobalStyleProvider,
+  Link,
+  Masthead,
+  MastheadUser,
+  MastheadUserItem,
+  Sidebar,
+  SidebarNav,
+  SidebarNavItem,
+  SidebarWrapper,
+} from '@royalnavy/react-component-library'
+import styled from 'styled-components'
+
+const isActive = new Date().getMinutes() % 2 === 0
+
+const StyledSidebar = styled(Sidebar)`
+  // max-height: 30rem;
+`
+const SimpleSidebarNav = () => (
+  <SidebarNav>
+    <SidebarNavItem
+      icon={<IconHome />}
+      link={<Link href="#">Dashboard</Link>}
+    />
+    <SidebarNavItem
+      icon={<IconVerifiedUser />}
+      link={<Link href="#">Reports</Link>}
+    />
+    <SidebarNavItem
+      icon={<IconLocalShipping />}
+      link={<Link href="#">Platforms</Link>}
+    />
+    <SidebarNavItem
+      icon={<IconFeedback />}
+      link={<Link href="#">Data&nbsp;Feed</Link>}
+    />
+    <SidebarNavItem
+      icon={<IconMessage />}
+      link={<Link href="#">Messages</Link>}
+    />
+    <SidebarNavItem
+      icon={<IconSettings />}
+      link={<Link href="#">Settings</Link>}
+    />
+  </SidebarNav>
+)
+
+const StyledMain = styled.main`
+  flex: 1;
+  display: flex;
+`
+
+const StyledApp = styled.div`
+  height: 100vh;
+  display: flex;
+
+  display: flex;
+  flex-direction: column;
+`
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
+    <GlobalStyleProvider>
+      <StyledApp>
+        <SidebarWrapper>
+          <StyledSidebar>
+            <SimpleSidebarNav />
+          </StyledSidebar>
+          <StyledMain>
+            <Masthead
+              homeLink={<Link href="#" />}
+              title="Navy Schedule Service"
+              user={
+                <MastheadUser initials="RN">
+                  <MastheadUserItem
+                    icon={<IconPerson />}
+                    link={<Link href="#">Profile</Link>}
+                  />
+                  <MastheadUserItem
+                    icon={<IconSettings />}
+                    link={<Link href="#">Settings</Link>}
+                  />
+                  <MastheadUserItem
+                    icon={<IconChatBubble />}
+                    link={<Link href="#">Support</Link>}
+                  />
+                  <MastheadUserItem
+                    icon={<IconExitToApp />}
+                    link={<Link href="#">Logout</Link>}
+                  />
+                </MastheadUser>
+              }
+              onSearch={function noRefCheck(e, searchText) {
+                console.log('search', searchText)
+              }}
             />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+          </StyledMain>
+        </SidebarWrapper>
+      </StyledApp>
+    </GlobalStyleProvider>
+  )
 }
