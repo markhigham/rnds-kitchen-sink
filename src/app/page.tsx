@@ -1,5 +1,6 @@
 'use client'
 
+import { LoremContainer } from '@/containers/LoremContainer'
 import '@royalnavy/fonts'
 import {
   IconChatBubble,
@@ -13,12 +14,15 @@ import {
   IconVerifiedUser,
 } from '@royalnavy/icon-library'
 import {
+  Breadcrumbs,
+  BreadcrumbsItem,
   Button,
   GlobalStyleProvider,
   Link,
   Masthead,
   MastheadUser,
   MastheadUserItem,
+  SectionDivider,
   Sidebar,
   SidebarNav,
   SidebarNavItem,
@@ -63,14 +67,26 @@ const SimpleSidebarNav = () => (
 const StyledMain = styled.main`
   flex: 1;
   display: flex;
+  flex-direction: column;
+  overflow: hidden;
 `
 
 const StyledApp = styled.div`
   height: 100vh;
   display: flex;
-
-  display: flex;
   flex-direction: column;
+  overflow: hidden;
+`
+
+const StyledBreadcrumbs = styled.div`
+  border-top: 1px solid #e5e5e5;
+  padding: 1rem;
+`
+
+const StyledContents = styled.div`
+  background-color: teal;
+  color: white;
+  flex: 1;
 `
 
 export default function Home() {
@@ -109,6 +125,19 @@ export default function Home() {
                 console.log('search', searchText)
               }}
             />
+            <StyledBreadcrumbs>
+              <Breadcrumbs>
+                <BreadcrumbsItem link={<Link href="/">Home</Link>} />
+                <BreadcrumbsItem href="/components">Components</BreadcrumbsItem>
+                <BreadcrumbsItem
+                  link={<Link href="/components/breadcrumb">Breadcrumb</Link>}
+                />
+              </Breadcrumbs>
+            </StyledBreadcrumbs>
+            <StyledContents>
+              <LoremContainer lines={150} />
+              <div>Hello world</div>
+            </StyledContents>
           </StyledMain>
         </SidebarWrapper>
       </StyledApp>
