@@ -1,33 +1,16 @@
 'use client'
 
+import { SimpleBreadCrumbs, StyledBreadcrumbs } from '@/app/simple-breadcrumbs'
 import { SimpleMasthead } from '@/app/simple-masthead'
 import { SimpleSidebarNav } from '@/app/simple-sidebar'
 import { LoremContainer } from '@/containers/LoremContainer'
 import '@royalnavy/fonts'
 import {
-  IconChatBubble,
-  IconExitToApp,
-  IconFeedback,
-  IconHome,
-  IconLocalShipping,
-  IconMessage,
-  IconPerson,
-  IconSettings,
-  IconVerifiedUser,
-} from '@royalnavy/icon-library'
-import {
   Breadcrumbs,
   BreadcrumbsItem,
-  Button,
   GlobalStyleProvider,
   Link,
-  Masthead,
-  MastheadUser,
-  MastheadUserItem,
-  SectionDivider,
   Sidebar,
-  SidebarNav,
-  SidebarNavItem,
   SidebarWrapper,
 } from '@royalnavy/react-component-library'
 import styled from 'styled-components'
@@ -43,20 +26,16 @@ const StyledApp = styled.div`
 `
 
 const StyledMain = styled.div`
-  border: dashed 3px hotpink;
   flex-direction: column;
-  overflow: hidden;
+  height: 100vh;
+  display: flex;
 `
-
-const StyledBreadcrumbs = styled.div`
-  border-top: 1px solid #e5e5e5;
-  padding: 1rem;
-`
-
 const StyledContents = styled.div`
-  flex-grow: 1;
-  border: dotted 5px blue;
-  overflow: scroll;
+  overflow: auto;
+`
+
+const StyledPanels = styled.div`
+  display: flex;
 `
 
 export default function Home() {
@@ -69,18 +48,13 @@ export default function Home() {
           </StyledSidebar>
           <StyledMain>
             <SimpleMasthead />
-            <StyledBreadcrumbs>
-              <Breadcrumbs>
-                <BreadcrumbsItem link={<Link href="/">Home</Link>} />
-                <BreadcrumbsItem href="/components">Components</BreadcrumbsItem>
-                <BreadcrumbsItem
-                  link={<Link href="/components/breadcrumb">Breadcrumb</Link>}
-                />
-              </Breadcrumbs>
-            </StyledBreadcrumbs>
+            <SimpleBreadCrumbs />
             <StyledContents>
-              <LoremContainer lines={150} />
-              <div>Hello world</div>
+              <StyledPanels>
+                <LoremContainer lines={5} />
+                <LoremContainer lines={2} />
+                <LoremContainer lines={5} />
+              </StyledPanels>
             </StyledContents>
           </StyledMain>
         </SidebarWrapper>
