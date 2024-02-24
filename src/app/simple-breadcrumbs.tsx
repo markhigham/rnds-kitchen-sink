@@ -6,7 +6,7 @@ import {
 import styled from 'styled-components'
 
 export const StyledBreadcrumbs = styled.div`
-  //border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5;
   padding: 1rem;
 `
 

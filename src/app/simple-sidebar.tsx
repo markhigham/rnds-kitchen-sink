@@ -1,4 +1,3 @@
-import { Link, SidebarNav, SidebarNavItem } from '@royalnavy/react-component-library'
 import {
   IconFeedback,
   IconHome,
@@ -7,6 +6,11 @@ import {
   IconSettings,
   IconVerifiedUser,
 } from '@royalnavy/icon-library'
+import {
+  Link,
+  SidebarNav,
+  SidebarNavItem,
+} from '@royalnavy/react-component-library'
 
 export const SimpleSidebarNav = () => (
   <SidebarNav>

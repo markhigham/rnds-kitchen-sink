@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0dd50629-2d31-4c0d-bed5-d57e21e52e41" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nvmrc" beforeDir="false" afterPath="$PROJECT_DIR$/.nvmrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/simple-masthead.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/simple-masthead.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/LoremContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/LoremContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/simple-breadcrumbs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/simple-breadcrumbs.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +36,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;hack-layouts&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -66,7 +64,8 @@
       <workItem from="1708501993450" duration="1645000" />
       <workItem from="1708674840547" duration="1741000" />
       <workItem from="1708684218769" duration="1389000" />
-      <workItem from="1708752832089" duration="2166000" />
+      <workItem from="1708752832089" duration="2505000" />
+      <workItem from="1708755364562" duration="56000" />
     </task>
     <servers />
   </component>

@@ -1,15 +1,12 @@
 'use client'
 
-import { SimpleBreadCrumbs, StyledBreadcrumbs } from '@/app/simple-breadcrumbs'
+import { SimpleBreadCrumbs } from '@/app/simple-breadcrumbs'
 import { SimpleMasthead } from '@/app/simple-masthead'
 import { SimpleSidebarNav } from '@/app/simple-sidebar'
 import { LoremContainer } from '@/containers/LoremContainer'
 import '@royalnavy/fonts'
 import {
-  Breadcrumbs,
-  BreadcrumbsItem,
   GlobalStyleProvider,
-  Link,
   Sidebar,
   SidebarWrapper,
 } from '@royalnavy/react-component-library'
@@ -52,7 +49,7 @@ export default function Home() {
             <StyledContents>
               <StyledPanels>
                 <LoremContainer lines={5} />
-                <LoremContainer lines={2} />
+                <LoremContainer lines={6} />
                 <LoremContainer lines={5} />
               </StyledPanels>
             </StyledContents>
